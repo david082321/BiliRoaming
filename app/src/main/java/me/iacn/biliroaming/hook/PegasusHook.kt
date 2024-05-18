@@ -471,6 +471,11 @@ class PegasusHook(classLoader: ClassLoader) : BaseHook(classLoader) {
                     val cardGoto = it.getObjectFieldAs<String?>("cardGoto").orEmpty()
                     val cardType = it.getObjectFieldAs<String?>("cardType").orEmpty()
                     val goto = it.getObjectFieldAs<String?>("goTo").orEmpty()
+                    Log.d("abcdefg")
+                    Log.d(cardGoto)
+                    Log.d(cardType)
+                    Log.d(goto)
+                    Log.d("-------")
                     filter.any { item ->
                         item in cardGoto || item in cardType || item in goto
                     } || isLowCountVideo(it) || isContainsBlockKwd(it) || durationVideo(it)
