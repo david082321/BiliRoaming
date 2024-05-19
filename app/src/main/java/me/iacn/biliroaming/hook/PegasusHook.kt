@@ -465,8 +465,11 @@ class PegasusHook(classLoader: ClassLoader) : BaseHook(classLoader) {
                 disableAutoRefresh()
                 customSmallCoverWhRatio()
             }
+            Log.d("startHook: Pegasus inside")
             if (!hidden) return@hookAfterMethod
+            Log.d("startHook: Pegasus inside2")
             data?.getObjectFieldAs<ArrayList<Any>>("items")?.run {
+                Log.d("startHook: Pegasus inside3")
                 removeAll {
                     val cardGoto = it.getObjectFieldAs<String?>("cardGoto").orEmpty()
                     val cardType = it.getObjectFieldAs<String?>("cardType").orEmpty()
