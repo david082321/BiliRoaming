@@ -121,7 +121,6 @@ class XposedInit : IXposedHookLoadPackage, IXposedHookZygoteInit {
                     startHook(UposReplaceHook(lpparam.classLoader))
                     startHook(SpeedHook(lpparam.classLoader))
                     startHook(MultiWindowHook(lpparam.classLoader))
-                    startHook(SkinHook(lpparam.classLoader))
                 }
 
                 lpparam.processName.endsWith(":web") -> {
